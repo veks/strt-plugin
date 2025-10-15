@@ -1,0 +1,41 @@
+{
+  "name": "strt/plugin",
+  "description": "Плагин STRT.",
+  "type": "wordpress-plugin",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "vek",
+      "email": "oleg@isvek.ru",
+      "homepage": "https://isvek.ru",
+      "role": "Developer"
+    }
+  ],
+  "license": "GPL-3.0",
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Strt\\Plugin\\": "src/php/"
+    },
+    "files": [
+      "includes/functions.php"
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "vendor-dir": "vendor"
+  },
+  "require": {
+    "php": ">=8.3",
+    "ext-imagick": "*",
+    "ext-gd": "*",
+    "ext-libxml": "*",
+    "ext-dom": "*",
+    "laravel/helpers": "^1.8"
+  },
+  "scripts": {
+    "composer-dump-autoload": [
+      "composer dump-autoload"
+    ]
+  }
+}
